@@ -14,14 +14,17 @@ body {
 
 header {
   position: fixed;
+  z-index: 3;
   width: 100%;
   padding: 40px 60px;
 }
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .logo {
@@ -127,13 +130,17 @@ nav ul li a:hover {
 }
 
 /* ======= responsivo ========== */
-/* @media (max-width: 950px) {
+@media (max-width: 950px) {
   .section {
     padding: 4rem;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
+  header {
+    background: #1c683f;
+    padding: 20px 60px;
+  }
   .section {
     padding: 8rem 4rem;
     flex-wrap: wrap;
@@ -141,18 +148,29 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 500px) {
-  header {
-    padding: 2rem;
-  }
+@media (max-width: 680px) {
   nav {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  nav ul {
     gap: 20px;
   }
   .section {
-    padding: 8rem 2rem;
+    padding-top: 10rem;
   }
-} */
+}
+
+@media (max-width: 500px) {
+  .left p {
+    font-size: 2rem;
+  }
+  .left h4 {
+    font-size: 2.5rem;
+  }
+  .section, header {
+    padding-inline: 2rem;
+  }
+  nav {
+    justify-content: center;
+  }
+  nav ul {
+    gap: 30px;
+  }
+}
